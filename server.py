@@ -3,7 +3,7 @@ import threading
 import socket
 
 PORT = 2137
-SERVER_IP = "localhost"
+SERVER_IP = "192.168.1.3"
 ADDR = (SERVER_IP, PORT)
 FORMAT = "utf-8"
 
@@ -52,8 +52,8 @@ def handle_client(conn: socket, addr: str, player_id: int, color: str, pos: tupl
                 if message == "on_finish":
                     if players_colors[player_id] not in result:
                         result.append(players_colors[player_id])
-                if len(result) + 1 >= len(players_pos):
-                    players_pos["is_end"] = result
+                        if len(result) + 1 >= len(players_pos):
+                            players_pos["is_end"] = result
                 else:
                     players_pos[player_id] = eval(message)
                 conn.send(str(players_pos).encode(FORMAT))
@@ -66,7 +66,7 @@ def handle_client(conn: socket, addr: str, player_id: int, color: str, pos: tupl
 
 def wait_to_start():
     global phase
-    x = input("Press enter to start >")
+    x = input("Press enter to start >\n")
     print("GAME started!!!")
     phase = "GAME"
 

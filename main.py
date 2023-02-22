@@ -7,7 +7,7 @@ import ast
 from player import Player
 
 PORT = 2137
-SERVER_IP = "localhost"
+SERVER_IP = "192.168.1.3"
 ADDR = (SERVER_IP, PORT)
 FORMAT = "utf-8"
 
@@ -59,10 +59,10 @@ player = Player(my_data['pos'], my_data['color'])
 players_colors = my_data['players_colors']
 
 screen.listen()
-screen.onkeypress(player.move_up, 'Up')
-screen.onkeypress(player.move_down, 'Down')
-screen.onkeypress(player.move_right, 'Right')
-screen.onkeypress(player.move_left, 'Left')
+screen.onkey(player.move_up, 'Up')
+screen.onkey(player.move_down, 'Down')
+screen.onkey(player.move_right, 'Right')
+screen.onkey(player.move_left, 'Left')
 
 end_blocks = []
 border_blocks = []

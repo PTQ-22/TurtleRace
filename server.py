@@ -15,7 +15,7 @@ COLORS = [
     "green",
     "blue",
     "orange",
-    "yellow",
+    "dark goldenrod",
     "purple",
     "pink",
     "brown",

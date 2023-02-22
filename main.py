@@ -7,7 +7,7 @@ import ast
 from player import Player
 
 PORT = 2137
-SERVER_IP = "192.168.1.3"
+SERVER_IP = "70.34.245.210"
 ADDR = (SERVER_IP, PORT)
 FORMAT = "utf-8"
 

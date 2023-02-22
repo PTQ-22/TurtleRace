@@ -1,22 +1,22 @@
 from turtle import Turtle
 
-from block import BorderBlock
+from block import Block
 
 
 class Player:
 
     SPEED = 10
 
-    def __init__(self):
+    def __init__(self, start_pos: tuple[int, int], color: str):
         self.turtle = Turtle()
-        self.turtle.turtlesize(1.5)
+        # self.turtle.turtlesize(1.5)
         self.turtle.penup()
-        self.turtle.setposition(-360, 335)
+        self.turtle.setposition(start_pos)
         self.turtle.shape("turtle")
-        self.turtle.color("green")
+        self.turtle.color(color)
         self.last_move = 'right'
 
-    def is_collided_with(self, other: BorderBlock) -> bool:
+    def is_collided_with(self, other: Block) -> bool:
         t1_width = self.turtle.shapesize()[0]
         t1_height = self.turtle.shapesize()[1]
 

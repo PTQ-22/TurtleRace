@@ -6,7 +6,7 @@ class Block:
     WIDTH = 30
     HEIGHT = 30
 
-    def __init__(self, start_pos: tuple[int, int], color: str = "black"):
+    def __init__(self, start_pos, color: str = "black"):
         self.turtle = Turtle()
         self.turtle.hideturtle()
         self.turtle.speed(0)

@@ -7,7 +7,7 @@ class Player:
 
     SPEED = 10
 
-    def __init__(self, start_pos: tuple[int, int], color: str):
+    def __init__(self, start_pos, color: str):
         self.turtle = Turtle()
         # self.turtle.turtlesize(1.5)
         self.turtle.penup()

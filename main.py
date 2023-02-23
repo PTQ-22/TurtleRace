@@ -48,7 +48,7 @@ thread = threading.Thread(target=waiting_for_id)
 thread.start()
 turtle.hideturtle()
 while my_obj is None:
-    turtle.write("Oczeiwanie na graczy", align="center", font=("Verdana", 40, "normal"))
+    turtle.write("Oczekiwanie na graczy", align="center", font=("Verdana", 40, "normal"))
     screen.update()
 screen.clear()
 screen.tracer(False)
